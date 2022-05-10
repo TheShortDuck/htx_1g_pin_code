@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+	<meta charset = "UTF-8">
+	<title>Firecifret</title>
+	<script src = "secScript.js" type = "text/javascript"></script>
+	<link href = "style.css" rel = "stylesheet" type = "text/css"/>
+</head>
+<body>
+	<center>
+		<header>
+			<h1>Firecifret PIN-kodebryder</h1>
+		</header>
+		<nav>
+			<li style = "display:inline-block;"><a href = "index.html" class = "button">Trecifret</a></li>
+			<li style = "display:inline-block;"><a href = "second.html" class = "button">Firecifret</a></li>
+		</nav>
+		<div id = "page">
+			<input id = "code" type = "text" maxlength = "4" placeholder = "Indtast kode" onkeypress = "return event.charCode >= 48 && event.charCode <= 57" size = "12"></input>
+			<!-- input felt længde sat max 4 karakterer og kun tal registreres-->
+			<br>
+			<button id = "btncrack" onclick = "crack()" type = "button">Bryd kode
+			</button> <!-- knap til at bryde koden-->
+			<br>
+			<textarea id = "cracked" readonly rows = "3" placeholder = "Brudt kode" cols = "16"></textarea>
+		</div>
+	</center>
+</body>
